@@ -1298,6 +1298,58 @@ header #SearchButton>svg {
     background-color: var(--bg-color-frame);
 }
 
+/* Neon ListView */
+
+.ListView-Farm {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 0.2rem;
+    font-family: 'Poppins';
+    overflow: scroll;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.ListView-Farm thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.ListView-Farm thead th:first-child {
+    border-top-left-radius: 0.55rem;
+}
+
+.ListView-Farm thead th:last-child {
+    border-top-right-radius: 0.55rem;
+}
+
+.ListView-Farm th,
+.ListView-Farm td {
+    padding: 6px;
+    text-align: left;
+}
+
+.ListView-Farm th {
+    background-color: #2daab8;
+    padding: 12px;
+}
+
+.ListView-Farm th {
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+
+.ListView-Farm td {
+    color: #4a4f65;
+}
+
+.ListView-Farm>tbody tr:hover {
+    background-color: #f3f4f3;
+}
+
 /* Version Control */
 
 .Version-Control {

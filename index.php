@@ -10,21 +10,42 @@
         type="text/css" />
     <link rel="stylesheet" href="/CSS/Toolkit.css">
     <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/dashboard.css">
 </head>
 
 <body>
-    <?php include "Library/loading.php"; ?>
-    <?php include "Library/header.php"; ?>
+    <?php require "Library/loading.php"; ?>
+    <?php require "Library/header.php"; ?>
     <main id="main">
-        <?php include "Library/sidebar.php"; ?>
+        <?php require "Library/sidebar.php"; ?>
         <section id="main-section">
             <div class="content-header">
-                <section>
-
+                <section class="main-content-title">
+                    <h4>Dashboard</h4>
                 </section>
-                
+                <section class="main-content-body">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+            </div>
+
         </section>
     </main>
+    <?php require "Library/notification.php"; ?>
     <script src="Javascript/Toolkit.js"></script>
     <script type="module" src="Javascript/main.js"></script>
 </body>

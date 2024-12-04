@@ -82,11 +82,16 @@ main {
 }
 
 main > section {
+    position: relative;
     display: grid;
-    padding: 1rem;
     color: var(--color-primary);
     margin-left: var(--sidebar-toggle);
-    transition: margin-left 300ms ease-out;
+    transition: margin-left 300ms ease-out, max-width 300ms ease-out;
+    max-width: calc(100% - var(--sidebar-toggle));
+    max-height: calc(100vh - 4rem);
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: #f3f4f3;
 }
 
 a {
@@ -112,6 +117,7 @@ header > #Logo {
     width: var(--sidebar-toggle);
     transition: width 300ms ease-out;
     height: 100%;
+    background-color: #323246;
 }
 
 header > #Logo > img {
@@ -120,7 +126,7 @@ header > #Logo > img {
 }
 
 header > #Logo > h4 {
-    color: black;
+    color: white;
     margin: auto auto auto 0;
 }
 
@@ -185,6 +191,16 @@ header .User-Profile-Container > ul >  :nth-child(2) > button span {
     background-color: var(--color-green);
 }
 
+.btn-message>svg {
+    width: 1.225rem;
+    height: 1.225rem;
+    vertical-align: middle;
+}
+.btn-notification>svg {
+    width: 1.225rem;
+    height: 1.225rem;
+    vertical-align: middle;
+}
 
 .User-Profile-Container .btn-profile {
     display: flex;
@@ -292,11 +308,17 @@ main > aside {
     flex-direction: column;
     position: fixed;
     min-height: calc(100vh - 4rem);
-    background-color: #0b7d3f;
+    max-height: calc(100vh - 4rem);
+    background-color: #323246;
     width: var(--sidebar-toggle);
     transition: width 300ms ease-out;
     font-family: 'Nunito';
     z-index: 50;
+    overflow-y: auto;
+}
+
+main > aside::-webkit-scrollbar {
+    display: none;  /* Hide the scrollbar */
 }
 
 aside > nav {
@@ -309,7 +331,7 @@ aside > nav {
 }
 
 #MainNavigation > ul {
-    color: var(--color-primary);
+    color: white;
 }
 
 #MainNavigation > ul > li > a {
@@ -320,22 +342,23 @@ aside > nav {
     margin-right: .4rem;
     border-radius: 0 .4rem .4rem 0;
     cursor: pointer;
-    background-color: #fefefe;
+    background-color: transparent;
     margin-bottom: .2rem;
 }
 
 #MainNavigation > ul > li:hover > a {
-    background-color: #8fe7c0;
-    color: var(--color-primary)
+    background-color: #0d0d13;
+    color: #64C5B1; 
 }
 
 #MainNavigation > ul > li > a > svg:not(:last-child) {
     margin: 0 .62rem;
     height: 1.2rem;
     width: 1.2rem;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    border-radius: 0%;
     padding: .6rem;
-    background-color: #2a2d3a;
+    background-color: transparent;
 }
 
 #MainNavigation > ul > li > a >  :nth-child(3) {
@@ -373,8 +396,9 @@ aside > nav {
 
 
 .NavigationActive {
-    color: var(--color-primary);
-    background-color: #8fe7c0 !important;
+    color: #64C5B1;
+    /* background-color: #8fe7c0 !important; */
+    background-color: #0d0d13 !important;
 }
 
 .NavigationActive::before {
@@ -382,7 +406,7 @@ aside > nav {
     position: absolute;
     width: .3rem;
     height: 100%;
-    background-color: #2a166f;
+    background-color: transparent;
 }
 
 .DropdownMenuList.show {
@@ -409,9 +433,25 @@ aside > nav {
     width: max-content;
 }
 
+/* Content Header */
+.content-header {
+    position: relative;
+}
+.content-header > .main-content-title {
+    height: 8rem;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    font-size: x-large;
+    background-color: #64c5b1;
+    color: white;
+    position: absolute;
+}
+
+
 /* Scrollbar design */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -420,12 +460,12 @@ aside > nav {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #0b7d3f;
+    background: #323246;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0b7d3f;
+    background: #323246;
 }
 
 input[type='number']::-webkit-inner-spin-button {

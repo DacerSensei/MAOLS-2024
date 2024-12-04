@@ -1,0 +1,15 @@
+.main-content-body {
+    top: 7rem;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-content-body > div {
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+    margin: 1rem;
+}
