@@ -7,6 +7,7 @@
     --color-border: #2C2E33;
     --color-ash: #d5dee1;
     --color-green: #00d25b;
+    --color-green-dark: #00553d;
     --color-yellow: #ffab00;
     --color-blue: #0090e7;
     --color-red: #fc424a;
@@ -14,6 +15,7 @@
     --color-pink: #f72585;
     --color-ash-transparency: #d5dee11C;
     --color-green-transparency: #00d25b1C;
+    --color-green-dark-transparency: #11614a1C;
     --color-yellow-transparency: #ffab001C;
     --color-blue-transparency: #0090e71C;
     --color-red-transparency: #fc424a1C;
@@ -231,7 +233,8 @@ header .User-Profile-Container > ul >  :nth-child(2) > button span {
 .btn-profile > svg {
     width: 1.4rem;
     height: 1.4rem;
-    fill: #999fa7;
+    /* fill: #999fa7; */
+    fill: #323246;
     vertical-align: middle;
 }
 

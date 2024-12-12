@@ -12,6 +12,18 @@ const Colors = {
     PrimaryColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary')
 }
 
+async function AJAXPostRequest(pathToSend, jsonToSend){
+    const response = await fetch(pathToSend, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(jsonToSend)
+    });
+
+    return response.json()
+}
+
 function ShowNotification(text, backgroundColor, textColor = Colors.White) {
     const notificationBar = document.getElementById("Notification-Bar");
     if (notificationBar) {

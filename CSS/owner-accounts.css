@@ -1,0 +1,21 @@
+.main-content-body {
+    top: 7rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-content-body > div.table-section {
+    position: relative;
+    min-height: 20rem;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+    overflow-x: auto;
+    max-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
+    min-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
+    margin-bottom: 2rem;
+}

@@ -1,7 +1,7 @@
 <header>
     <div id="Logo">
         <img src="/Assets/Logo.png">
-        <h4>Agriculture of livestock</h4>
+        <h4>Agriculture Livestock</h4>
     </div>
     <div class="header-menu">
         <button class="side-menu-collapse DefaultButton">
@@ -12,9 +12,9 @@
 
         <div class="User-Profile-Container">
             <ul>
-            <li>
+                <li>
                     <button class="btn-message DefaultButton header-button" id="user-message-btn">
-                        <svg class="Fill-Primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg fill="#323246" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
                             <foreignObject width="100%" height="100%">
                                 <span></span>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="border-left">
                     <button class="btn-notification DefaultButton header-button" id="user-notification-btn">
-                        <svg class="Fill-Primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg fill="#323246" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21" />
                             <foreignObject width="100%" height="100%">
                                 <span></span>
