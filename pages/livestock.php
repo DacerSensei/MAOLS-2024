@@ -1,6 +1,12 @@
 <?php
+
+session_start();
 $doucmentRoot = $_SERVER['DOCUMENT_ROOT'];
 require "$doucmentRoot/config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["farm_name"]) && isset($_GET["farm_id"])) {
         $farm_name = $_GET["farm_name"];

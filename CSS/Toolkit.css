@@ -152,7 +152,7 @@
 }
 
 .Solid-Button-Green {
-    background-color: #0b7d3f;
+    background-color: var(--color-green-dark);
     padding: .6rem 1.25rem;
     border-radius: 2px;
     font-weight: normal;

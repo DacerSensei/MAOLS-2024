@@ -1,5 +1,10 @@
 <?php
+session_start();
 require "config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
 
 $sql = "SELECT * FROM announcements ORDER BY timestamp DESC";
 $stmt = $pdo->query($sql);
@@ -45,7 +50,7 @@ $stmt = $pdo->query($sql);
                             <i class="fa-solid fa-d"></i>
                             <input id="announcement-description" type="text" placeholder="Enter your description" required>
                         </div>
-                        <button type="submit" class="Solid-Button-Red" style="font-size: 1.125rem">Create Announcement</button>
+                        <button type="submit" class="Solid-Button-Green" style="font-size: 1.125rem">Create Announcement</button>
                     </section>
                 </form>
             </div>

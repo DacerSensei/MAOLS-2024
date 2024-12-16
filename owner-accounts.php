@@ -1,5 +1,10 @@
 <?php
+session_start();
 require "config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
 
 $sql = "SELECT * FROM users";
 $stmt = $pdo->query($sql);

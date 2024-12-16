@@ -1,5 +1,10 @@
 <?php
+session_start();
 require "config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
 
 $sql = "SELECT schedules.*, users.first_name, users.last_name, users.contact, farms.farm_name 
         FROM schedules LEFT JOIN users ON schedules.user_id = users.id

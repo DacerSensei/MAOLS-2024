@@ -1,3 +1,11 @@
+<?php 
+session_start();
+require "config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

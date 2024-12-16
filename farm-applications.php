@@ -1,5 +1,10 @@
 <?php
+session_start();
 require "config/Database.php";
+if (!$_SESSION["isLoggedIn"]) {
+    header('Location: login.php');
+    exit;
+}
 
 $sql = "SELECT farms.*, users.first_name, users.last_name FROM farms LEFT JOIN users ON users.id = farms.user_id 
         WHERE farms.status = 'pending' AND users.status = 'active'";
