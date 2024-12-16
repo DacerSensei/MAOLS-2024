@@ -12,7 +12,8 @@ const Colors = {
     PrimaryColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary')
 }
 
-async function AJAXPostRequest(pathToSend, jsonToSend){
+
+async function AJAXPostRequest(pathToSend, jsonToSend) {
     const response = await fetch(pathToSend, {
         method: "POST",
         headers: {
@@ -20,7 +21,16 @@ async function AJAXPostRequest(pathToSend, jsonToSend){
         },
         body: JSON.stringify(jsonToSend)
     });
+    return response.json()
+}
 
+async function AJAXGetRequest(pathToSend) {
+    const response = await fetch(pathToSend, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
     return response.json()
 }
 
@@ -324,3 +334,65 @@ class Picker extends HTMLElement {
 }
 customElements.define("picker-component", Picker);
 // End Custom Picker
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const currentDate = new Date();
+//     let currentMonth = currentDate.getMonth(); // 0-11 (0 = January)
+//     let currentYear = currentDate.getFullYear();
+
+//     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+//     const monthYearDisplay = document.querySelector(".Calendar-Picker-Container .Calendar-Current-Month-Year");
+//     const calendarBody = document.querySelector(".Calendar-Picker-Container .Calendar-Picker-Body");
+
+//     document.querySelector(".Calendar-Picker-Container .Calendar-Picker-Month-Container > span > :nth-child(1)").addEventListener("click", () => {
+//         currentMonth--;
+//         if (currentMonth < 0) {
+//             currentMonth = 11;
+//             currentYear--;
+//         }
+//         RenderCalendar();
+//     });
+
+//     document.querySelector(".Calendar-Picker-Container .Calendar-Picker-Month-Container > span > :nth-child(2)").addEventListener("click", () => {
+//         currentMonth++;
+//         if (currentMonth > 11) {
+//             currentMonth = 0;
+//             currentYear++;
+//         }
+//         RenderCalendar();
+//     });
+
+//     function RenderCalendar() {
+//         monthYearDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+//         calendarBody.innerHTML = "";
+
+//         const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+//         const numDaysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+//         for (let i = 0; i < 7; i++) {
+//             const dayHeader = document.createElement("div");
+//             dayHeader.className = "day";
+//             dayHeader.textContent = daysOfWeek[i];
+//             calendarBody.appendChild(dayHeader);
+//         }
+
+//         // Create empty spaces before the first day of the month
+//         for (let i = 0; i < firstDay; i++) {
+//             const emptySpace = document.createElement("div");
+//             emptySpace.className = "day empty";
+//             calendarBody.appendChild(emptySpace);
+//         }
+
+//         // Create the days of the month
+//         for (let day = 1; day <= numDaysInMonth; day++) {
+//             const dayElement = document.createElement("div");
+//             dayElement.className = "day";
+//             dayElement.textContent = day;
+//             calendarBody.appendChild(dayElement);
+//         }
+//     }
+//     RenderCalendar();
+// });

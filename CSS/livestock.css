@@ -1,0 +1,120 @@
+.main-content-body {
+    top: 7rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-content-body>div.livestock-section {
+    position: relative;
+    min-height: 20rem;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+    overflow-x: auto;
+    max-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
+    min-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0rem;
+    flex-direction: column;
+}
+
+.livestock-section-header {
+    background-color: transparent;
+    margin: .8rem;
+}
+
+.Solid-Button-Red {
+    background-color: #d1272c;
+    padding: .6rem 1.25rem;
+    border-radius: 2px;
+    font-weight: normal;
+    font-family: 'Nunito';
+    transition: 300ms ease;
+    font-size: .9rem;
+    font-weight: 600;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+
+.Solid-Button-Red:hover {
+    background-color: #feaf39;
+}
+
+.livestock-section-body {
+    margin: .8rem;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.livestock {
+    position: relative;
+    background-color: var(--color-green-dark);
+    width: 160px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: .8rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.livestock > .livestock-header {
+    flex-grow: 0;
+    margin: .2rem 0;
+}
+
+.livestock > .livestock-header > p {
+    text-align: center;
+}
+
+.livestock > .livestock-body {
+    flex-grow: 1;
+    display: flex;
+}
+
+.livestock > .livestock-body > img {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.livestock > .livestock-footer {
+    margin: .2rem 0;
+}
+
+.livestock > .livestock-footer > p {
+    flex-grow: 0;
+}
+
+.livestock > .livestock-actions {
+    position: absolute;
+    background-color: #323246   ;
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    border-radius: .4rem;
+    top: calc(100% + .2rem);
+    padding: .2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    display: none;
+}
+
+.livestock > .livestock-actions.open {
+    display: flex;
+}
+

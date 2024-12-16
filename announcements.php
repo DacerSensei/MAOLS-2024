@@ -17,10 +17,40 @@ $stmt = $pdo->query($sql);
         type="text/css" />
     <link rel="stylesheet" href="/CSS/Toolkit.css">
     <link rel="stylesheet" href="/CSS/main.css">
-    <link rel="stylesheet" href="/CSS/farms.css">
+    <link rel="stylesheet" href="/CSS/announcements.css">
 </head>
 
 <body>
+    <div id="Add-Modal" class="modal-container">
+        <div class="modal-content" style="width: -webkit-fill-available; height: -webkit-fill-available;">
+            <div class="modal-header">
+                <h4>Create Announcements</h4>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" style="padding: 1rem; box-sizing: border-box;">
+                <form method="post" id="announcement-form">
+                    <section>
+                        <h2>Announcement</h2>
+                        <p>Create a new announcement</p>
+
+                        <div class="Solid-Textbox-Green">
+                            <i class="fa-solid fa-t"></i>
+                            <input id="announcement-title" type="text" placeholder="Enter your title" required>
+                        </div>
+                        <div class="Solid-Textbox-Green">
+                            <i class="fa-solid fa-b"></i>
+                            <input id="announcement-body" type="text" placeholder="Enter your body" required>
+                        </div>
+                        <div class="Solid-Textbox-Green">
+                            <i class="fa-solid fa-d"></i>
+                            <input id="announcement-description" type="text" placeholder="Enter your description" required>
+                        </div>
+                        <button type="submit" class="Solid-Button-Red" style="font-size: 1.125rem">Create Announcement</button>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
     <?php require "Library/loading.php"; ?>
     <?php require "Library/header.php"; ?>
     <main id="main">
@@ -30,7 +60,11 @@ $stmt = $pdo->query($sql);
                 <section class="main-content-title">
                     <h4>Announcements</h4>
                 </section>
+
                 <section class="main-content-body">
+                    <section class="main-content-header">
+                        <button class="Button-Green-Dark modal-trigger" id="add-button" data-target="Add-Modal">Create Announcement</button>
+                    </section>
                     <div class="table-section">
                         <table class="ListView-Farm" id="myTable">
                             <thead>
@@ -80,6 +114,7 @@ $stmt = $pdo->query($sql);
     <?php require "Library/notification.php"; ?>
     <script src="Javascript/Toolkit.js"></script>
     <script type="module" src="Javascript/main.js"></script>
+    <script src="Javascript/announcements.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@ $input = json_decode(file_get_contents("php://input"), true);
 
 if (isset($input["id"])) {
     $id = intval($input["id"]);
-    $query = "DELETE FROM announcements WHERE id = :id";
+    $query = "DELETE FROM farms WHERE id = :id";
 
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":id", $id);

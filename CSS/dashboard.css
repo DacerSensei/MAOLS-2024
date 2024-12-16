@@ -8,8 +8,13 @@
 }
 
 .main-content-body > div {
-    width: 300px;
-    height: 100px;
-    background-color: blue;
+    background-color: white;
     margin: 1rem;
+    border-radius: .8rem;
+}
+
+.main-content-body > div:first-child {
+    width: 600px;
+    height: 300px;
+    padding: 1rem;
 }

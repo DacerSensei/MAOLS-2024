@@ -861,7 +861,7 @@
 .Solid-Textbox-Green>i {
     font-size: 1rem;
     padding: 1rem;
-    background-color: #0b7d3f;
+    background-color: #00553d;
     color: white;
     width: 1rem;
     text-align: center;
@@ -1712,7 +1712,7 @@ header #SearchButton>svg {
     bottom: 0;
     left: 0;
     height: 5px;
-    width: 100%;    
+    width: 100%;
     background-color: #ddd;
     transition: .5s;
 }
@@ -1751,7 +1751,7 @@ header #SearchButton>svg {
     display: block;
 }
 
-.tab-panel > * {
+.tab-panel>* {
     display: grid;
 }
 
@@ -1813,35 +1813,107 @@ header #SearchButton>svg {
 .Calendar-Picker-Container {
     display: inline;
     position: relative;
+    font-family: 'poppins';
+
 }
 
-.Calendar-Picker-Container > :nth-child(2) {
+.Calendar-Picker-Container> :nth-child(2) {
     position: absolute;
-    width: 400px;
+    width: 300px;
     height: 400px;
-    background-color: red;
+    background-color: white;
     top: 200%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+
+.Calendar-Picker-Container> :nth-child(2).active {
     display: flex;
 }
 
-.Calendar-Picker-Container > :nth-child(2).active {
-    display: block;
-}
-
-.Calendar-Picker-Container > :nth-child(2) .Calendar-Picker-Header {
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Header {
     position: relative;
     width: 100%;
-    height: 30%;
-    background-color: blue;
+    height: 20%;
+    background-color: var(--color-green-dark);
+    color: white;
     border-radius: 6px 6px 0px 0px;
     display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.Calendar-Picker-Container > :nth-child(2) .Calendar-Picker-Header {
-    
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Header>p {
+    font-size: 1rem;
+}
+
+.Calendar-Picker-Container> :nth-child(2)> :nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .6rem;
+    flex-grow: 0;
+    color: black;
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body {
+    width: 100%;
+    flex-grow: 1;
+    background-color: transparent;
+    color: black;
+    border-radius: 0px 0px 6px 6px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    padding: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    gap: .2rem;
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body>div {
+    position: relative;
+    background-color: transparent;
+    text-align: center;
+    cursor: context-menu;
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body> div>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body> .day {
+    cursor: pointer;
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body> .day:hover {
+    border: solid 2px var(--color-green-dark);
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body> .day.today{
+    background-color: var(--color-green-dark);
+    color: white;
+}
+
+.Calendar-Picker-Container> :nth-child(2) .Calendar-Picker-Body> .day-empty:hover {
+    border: solid 2px transparent;
 }
 
 /* End Calendar Date Picker */
@@ -1939,7 +2011,7 @@ header #SearchButton>svg {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: #0b7d3f;
+    background-color: #00553d;
     padding: 10px;
     font-family: 'Poppins';
     color: white;
@@ -2026,7 +2098,7 @@ header #SearchButton>svg {
     border-bottom: 1px solid #d1272c;
 }
 
-.Solid-Picker-Red > picker-component picker-item-component:hover {
+.Solid-Picker-Red>picker-component picker-item-component:hover {
     background-color: #d1272c;
     color: white;
 }
@@ -2066,7 +2138,7 @@ header #SearchButton>svg {
     border-bottom: 1px solid #0b7d3f;
 }
 
-.Solid-Picker-Green > picker-component picker-item-component:hover {
+.Solid-Picker-Green>picker-component picker-item-component:hover {
     background-color: #0b7d3f;
     color: white;
 }

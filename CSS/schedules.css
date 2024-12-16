@@ -7,7 +7,7 @@
     height: 100%;
 }
 
-.main-content-body > div.schedule-section {
+.main-content-body>div.schedule-section {
     position: relative;
     min-height: 20rem;
     background-color: white;
@@ -18,6 +18,9 @@
     max-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
     min-width: calc(100vw - (var(--sidebar-toggle) + 2rem + 5px));
     margin-bottom: 2rem;
+    display: flex;
+    gap: 0rem;
+    flex-direction: column;
 }
 
 .schedule-section-header {
@@ -45,3 +48,8 @@
     background-color: #feaf39;
 }
 
+.schedule-section-body {
+    margin: .8rem;
+    background-color: transparent;
+
+}

@@ -24,21 +24,8 @@
                     <h4>Dashboard</h4>
                 </section>
                 <section class="main-content-body">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div><canvas id="user-type-chart"></canvas></div>
+                    <div><canvas id="livestock-chart"></canvas></div>
                     <div></div>
                 </section>
             </div>
@@ -48,6 +35,10 @@
     <?php require "Library/notification.php"; ?>
     <script src="Javascript/Toolkit.js"></script>
     <script type="module" src="Javascript/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.js"
+        integrity="sha512-ohOeYvGoLlCxYkfMoPBKJh/wp4Oe76rEJDWOmQq1LLrJD6yCBSPVmhhXuZYvuxdYR3PiozsUf+TZZ6yhVBGYAQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/Javascript/dashboard.js"></script>
 </body>
 
 </html>
